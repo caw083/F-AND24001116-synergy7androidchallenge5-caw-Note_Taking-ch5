@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="registerDataBinding"
+            type="com.example.challenge4.fragments.register.RegisterBinding" />
+    </data>
+    <FrameLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.register.Register">
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/register_bk_color"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:layout_marginTop="30dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                            style="@style/viewParent.headerText.NoMode"
+                            android:textColor="@color/whiteTextColor"
+                            android:text="@{registerDataBinding.headerText}"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_login_hero"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"/>
+                    </RelativeLayout>
+
+                    <include layout="@layout/register_card_view" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="12"
+                        android:gravity="center"
+                        android:layout_marginTop="30dp">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:background="@color/whiteTextColor"
+                            android:layout_weight="3"/>
+
+                        <TextView
+                            style="@style/viewParent.headerText.NoMode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/whiteTextColor"
+                            android:text="@{registerDataBinding.useOtherMethodsText}"
+                            android:layout_weight="6"
+                            android:textSize="12sp"
+                            android:textAlignment="center"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:background="@color/whiteTextColor"
+                            android:layout_weight="3"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="30dp">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_facebook"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_google_plus"
+                            android:layout_marginLeft="10dp"/>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+            </ScrollView>
+            <View
+                android:layout_marginTop="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="11dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_side_bg"/>
+            <ImageView
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back_img"
+                android:layout_marginRight="11dp"
+                android:layout_marginBottom="30dp"
+                android:adjustViewBounds="false"/>
+        </RelativeLayout>
+    </FrameLayout>
+</layout>

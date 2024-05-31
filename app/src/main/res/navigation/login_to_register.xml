@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_to_register"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.challenge4.fragments.login.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/register" />
+        <action
+            android:id="@+id/action_login_to_list2"
+            app:destination="@id/list2" />
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.challenge4.fragments.register.Register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/list2"
+        android:name="com.example.challenge4.fragments.list.List"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_list2_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_list2_to_add3"
+            app:destination="@id/add3" />
+    </fragment>
+    <fragment
+        android:id="@+id/add3"
+        android:name="com.example.challenge4.fragments.add.Add"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_add3_to_list2"
+            app:destination="@id/list2" />
+    </fragment>
+</navigation>
